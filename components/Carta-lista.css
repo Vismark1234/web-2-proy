@@ -1,0 +1,48 @@
+/* Contenedor principal de las cartas */
+.lista-cartas {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cartas se acomoden en filas */
+    justify-content: center; /* Centra las cartas horizontalmente */
+    gap: 20px; /* Espaciado entre cartas */
+    padding: 20px;
+    
+}
+
+/* Estilo general para las cartas (opcional si tienes estilos en el componente `Carta`) */
+.carta {
+    background-color: #fff; /* Fondo blanco para contraste */
+    border: 1px solid #ddd; /* Borde para separar visualmente las cartas */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    padding: 20px;
+    width: calc(33.33% - 40px); /* Tres columnas en pantallas grandes */
+    box-sizing: border-box;
+    transition: transform 0.3s; /* Efecto de hover */
+    word-wrap: break-word; /* Evita el desbordamiento del texto */
+    overflow-wrap: break-word;
+}
+
+/* Efecto de hover */
+.carta:hover {
+    transform: scale(1.05); /* Agranda ligeramente la carta al pasar el mouse */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1024px) {
+    .carta {
+        width: calc(50% - 40px); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .carta {
+        width: calc(100% - 40px); /* Una columna en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .carta {
+        width: 100%; /* Asegura que las cartas ocupen todo el ancho en móviles */
+        padding: 15px; /* Reduce el padding en pantallas pequeñas */
+    }
+}

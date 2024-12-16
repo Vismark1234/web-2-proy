@@ -1,0 +1,97 @@
+.contenedor-pagina4 {
+  width: 100%;
+  height: auto; /* Cambiado a 'auto' para que ajuste dinámicamente */
+  background-color: #333; /* Fondo oscuro */
+}
+
+/* Imagen principal */
+.imagen-princ {
+  position: relative;
+  width: 100%;
+  max-height: 800px;
+  overflow: hidden; /* Oculta cualquier contenido que desborde */
+}
+
+.img-principal {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Texto sobrepuesto */
+.texto-sobrepuesto {
+  padding: 20px; /* Espaciado más pequeño en móviles */
+  background-color: rgba(250, 235, 215, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  z-index: 1;
+  width: 90%; /* Ajusta el ancho en pantallas pequeñas */
+  box-sizing: border-box;
+}
+
+/* Mapa */
+.mapa {
+  width: 100%;
+  height: 600px;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: center;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Títulos */
+.titulos-pag4 {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #333; /* Fondo oscuro */
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .texto-sobrepuesto {
+    font-size: 1.5rem; /* Reduce el tamaño de fuente en móviles */
+    padding: 15px;
+  }
+
+  .mapa {
+    height: 400px; /* Reduce la altura del mapa en pantallas pequeñas */
+    padding: 10px;
+  }
+
+  .titulos-pag4 {
+    font-size: 1.5rem; /* Reduce el tamaño del título */
+  }
+}
+
+@media (max-width: 480px) {
+  .texto-sobrepuesto {
+    font-size: 1.2rem; /* Ajusta más para dispositivos pequeños */
+    padding: 10px;
+  }
+
+  .mapa {
+    height: 300px; /* Más pequeño en dispositivos muy pequeños */
+  }
+
+  .titulos-pag4 {
+    font-size: 1.2rem;
+  }
+}

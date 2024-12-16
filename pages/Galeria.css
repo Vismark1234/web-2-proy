@@ -1,0 +1,39 @@
+.galeria-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.imagen-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.imagen-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.texto-superpuesto {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  max-width: 80%;
+}
+
+@media (max-width: 768px) {
+  .texto-superpuesto {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
